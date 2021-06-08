@@ -49,6 +49,19 @@
 </nav>
 
     <!-- Optional JavaScript; choose one of the two! -->
+
+
+
+{% if messages %}
+            {% for message in messages %}
+            <div class="alert alert-warning alert-dismissible fade show" role="alert">
+              {{ message }}
+  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+</div>
+            {% endfor %}
+{% endif %}
             {% block body %} {% endblock body %}
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
